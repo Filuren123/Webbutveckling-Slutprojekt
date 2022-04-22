@@ -1,0 +1,15 @@
+/* Generic */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+
+}
+
+.wrapper {
+    height: 100vh;
+    max-height: 100%;
+    width: 100%;
+}
