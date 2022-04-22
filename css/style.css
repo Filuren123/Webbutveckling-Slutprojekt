@@ -2,10 +2,22 @@
 * {
     margin: 0;
     padding: 0;
+    color: var(--text-color);
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 :root {
+    --main-color: #871262;
+    --secondary-color: #fff;
+    
+    --text-color: #333333;
 
+    --tri-colors-r: #df1d21;
+    --tri-colors-b: #5e9724;
+    --tri-colors-g: #199bd3;
 }
 
 .wrapper {
@@ -13,3 +25,40 @@
     max-height: 100%;
     width: 100%;
 }
+
+.img-container img {
+    display: grid;
+    place-items: center;
+    
+    width: 100%;
+}
+
+/* Nav */
+.naven {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    box-shadow: 0px 2px 8px 0px #7c7c7c;
+}
+
+.naven .img-container {
+    width: 6rem;
+    padding: 1rem;
+}
+
+.naven .anchors a {
+    margin: 0 1rem;
+    padding: 2rem 2rem;
+    font-size: 1.8rem;
+    border-radius: 10px;
+    text-decoration: none;
+
+    transition: all 0.1s linear;
+}
+
+.naven .anchors a:hover {
+    background: var(--main-color);
+    color: #fff;
+}
+
