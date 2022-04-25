@@ -1,8 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Source+Code+Pro&display=swap');
+
+/* Fonts
+    font-family: 'Merriweather', serif;
+    font-family: 'Source Code Pro', monospace;
+*/
+
+
 /* Generic */
 * {
     margin: 0;
     padding: 0;
     color: var(--text-color);
+    font-family: var(--base-font);
 }
 
 html {
@@ -18,6 +27,9 @@ html {
     --tri-colors-r: #df1d21;
     --tri-colors-b: #5e9724;
     --tri-colors-g: #199bd3;
+
+    --headline-font: 'Source Code Pro', monospace;
+    --base-font: 'Merriweather', serif;
 }
 
 .wrapper {
@@ -33,23 +45,30 @@ html {
     width: 100%;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--headline-font);
+}
+
 /* Nav */
 .naven {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    box-shadow: 0px 2px 8px 0px #7c7c7c;
+    position: relative;
+    z-index: 99;
+    box-shadow: 0px 2px 8px 0px #555555;
+    height: 5rem;
 }
 
 .naven .img-container {
-    width: 6rem;
-    padding: 1rem;
+    width: 4rem;
+    margin-left: 1rem;
 }
 
 .naven .anchors a {
     margin: 0 1rem;
-    padding: 2rem 2rem;
+    padding: 1rem 2rem;
     font-size: 1.8rem;
     border-radius: 10px;
     text-decoration: none;
@@ -62,3 +81,71 @@ html {
     color: #fff;
 }
 
+/* Introduktion */
+.introduction {
+    display: flex;
+    
+    background-image: url("/img/placeholders/LTG-hero-2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 70vh;
+}
+
+.introduction > * {
+    width: 50%;
+    height: 100%;
+}
+
+.introduction .welcome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    background: rgba(255, 255, 255, 0.774);
+
+    margin-top: 10%;
+    border-radius: 1rem;
+    margin-right: 3rem;
+    padding: 1rem;
+}
+
+.welcome .info {
+    font-size: 1.6rem;
+    padding: 1rem;
+}
+
+.welcome h1 {
+    font-size: 4rem;
+    text-align: center;
+}
+
+.welcome h1 > * {
+    font-family: var(--headline-font);
+    letter-spacing: 1rem;
+}
+
+.introduction .signup {
+    margin: 0.3rem 0;
+}
+
+.introduction .signup input {
+    border: 2px rgb(155, 155, 155) solid;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    padding: 0.5rem;
+}
+
+.introduction .signup input[type="submit"] {
+    background: var(--main-color);
+    color: #fff;
+    border-color: var(--main-color);
+    margin-left: 1rem;
+    
+    transition: all 0.1s linear;
+}
+
+.introduction .signup input[type="submit"]:hover {
+    background: #fff;
+    color: #000;
+}
