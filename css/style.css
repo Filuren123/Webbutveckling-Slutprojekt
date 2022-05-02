@@ -52,16 +52,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Header */
-header {
+.the_header {
     display: flex;
     flex-direction: column;
 }
 
-header h1 {
+.the_header h1 {
     padding: 1.5rem 1rem;
 }
 
-header h1 a {
+.the_header h1 a {
     text-decoration: none;
     font-family: var(--headline-font);
 }
@@ -255,6 +255,90 @@ header h1 a {
 .offer .img-container img {
     color: #fff;
 }
+
+.varukorg_main {
+    max-width: 60rem;
+    margin: auto;
+    margin-top: 3rem;
+    border: rgb(110, 110, 110) 1px solid;
+    border-radius: 5px;
+}
+
+.varukorg_main header h2 {
+    padding: 1rem;
+}
+
+.artiklar_varu {
+    padding: 0 1rem;
+}
+
+.artiklar_varu .top_info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.artiklar_varu .top_info > * {
+    flex: 0 1 12rem;
+    margin-bottom: 1rem;
+    padding: 1rem 0;
+    border-bottom: rgb(110, 110, 110) dashed 1px;
+    border-top: rgb(110, 110, 110) solid 1px;
+}
+
+.varu_artikel {
+    display: flex;
+}
+
+h3.sec_artikel.sec_artikel {
+    flex: 0 0 20rem;
+}
+
+h3.sec_styckpris {
+
+}
+
+h3.sec_antal {
+
+}
+
+h3.sec_lagerstatus {
+
+}
+
+h3.sec_pris {
+
+}
+
+div.sec_artikel {
+    display: flex;
+
+    
+    flex: 0 0 20rem;
+    padding: 1rem;
+}
+
+div.sec_artikel .img-container img {
+    object-fit: cover;
+    flex: 1 1 11rem;
+}
+
+div.sec_styckpris {
+
+}
+
+div.sec_antal {
+
+}
+
+div.sec_lagerstatus {
+
+}
+
+div.sec_pris {
+
+}
+
+
 
 
 .temp {
