@@ -32,9 +32,7 @@ html {
 }
 
 .wrapper {
-    height: 100vh;
-    max-height: 100%;
-    width: 100%;
+    min-height: 100%;
 }
 
 .img-container {
@@ -49,6 +47,10 @@ html {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--headline-font);
+}
+
+button, input[type="submit"] {
+    cursor: pointer;
 }
 
 /* Header */
@@ -510,4 +512,44 @@ div.sec_pris {
 
 .temp {
     height: 20rem;
+}
+
+/* Footer */
+.footern {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: var(--main-color);
+    margin-top: 4rem;
+    height: 20rem;
+}
+
+.footern * {
+    color: #fff;
+    font-family: var(--headline-font);
+}
+
+.inner_footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 70rem;
+}
+
+.inner_footer ul {
+    list-style: none;
+    margin-top: 0.6rem;
+}
+
+.inner_footer ul li {
+    padding: 0.6rem 0;
+
+    transition: all 0.2s ease-in-out;
+}
+
+.inner_footer ul li:hover {
+    cursor: pointer;
+    transform: translateX(1rem);
 }
