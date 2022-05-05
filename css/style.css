@@ -22,7 +22,7 @@ html {
 :root {
     --main-color: #636940;
     --secondary-color: #cde7b0;
-    -tri-colors: #6b9ac4;
+    --tri-colors: #6b9ac4;
     
     --text-color: #333333;
     --text-color-light: #fff;
@@ -73,7 +73,6 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
 
     background: var(--main-color);
-    position: relative;
     z-index: 99;
     height: 5rem;
 }
@@ -256,6 +255,8 @@ h1, h2, h3, h4, h5, h6 {
     color: #fff;
 }
 
+/* Varukorgen */
+
 .varukorg_main {
     max-width: 60rem;
     margin: auto;
@@ -294,19 +295,19 @@ h3.sec_artikel.sec_artikel {
 }
 
 h3.sec_styckpris {
-
+    flex: 1 1 5rem;
 }
 
 h3.sec_antal {
-
+    flex: 1 1 5rem;
 }
 
 h3.sec_lagerstatus {
-
+    flex: 1 1 5rem;
 }
 
 h3.sec_pris {
-
+    flex: 1 1 5rem;
 }
 
 div.sec_artikel {
@@ -323,23 +324,189 @@ div.sec_artikel .img-container img {
 }
 
 div.sec_styckpris {
-
+    flex: 1 1 5rem;
 }
 
 div.sec_antal {
-
+    flex: 1 1 5rem;
 }
 
 div.sec_lagerstatus {
-
+    flex: 1 1 5rem;
 }
 
 div.sec_pris {
-
+    flex: 1 1 5rem;
 }
 
+/* Sortiment */
 
+.sortiment {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
 
+    max-width: 65rem;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+.sortiment .quick_nav {
+    width: 13rem;
+    border: #cecece solid 1px;
+}
+
+.sortiment .quick_nav .top {
+    background: rgb(238, 238, 238);
+    font-weight: bold;
+    padding: 0.7rem;
+    border-bottom: #cecece solid 1px;
+    margin-bottom: 0.5rem;
+    font-family: var(--headline-font);
+    font-size: 1.2rem;
+}
+
+.quick_nav .category a, .quick_nav .sub_category a {
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 0.6rem;
+    font-family: var(--headline-font);
+
+    transition: all 0.1s ease-in-out;
+}
+
+.quick_nav .category {
+    font-size: 1.1rem;
+    margin: 0.7rem 0;
+}
+
+.quick_nav .category a:hover {
+    text-decoration: underline;
+}
+
+.quick_nav .category a:hover::before {
+    margin-right: 1.2rem;
+}
+
+.quick_nav .sub_category a:first-child {
+    padding-top: 0rem;
+}
+
+.quick_nav .sub_category a:hover {
+    text-decoration: underline;
+    transform: translateX(0.8rem);
+}
+
+.quick_nav .category a::before {
+    content: url("/img/svg/arrow.svg");
+    filter: invert(0%) sepia(0%) saturate(0%) brightness(0%) contrast(100%);
+    width: 0.5rem;
+    display: inline-block;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+
+    transition: all 0.1s ease-in-out;
+}
+
+.quick_nav .sub_category {
+    display: none;
+    flex-direction: column;
+
+    margin-bottom: 0.4rem;
+}
+
+.sub_category_open {
+    display: flex !important;
+}
+
+.product_show {
+    flex: 1 1;
+    margin-left: 1rem;
+}
+
+.product_show h1 {
+    font-size: 2rem;
+    margin-left: 1rem;
+}
+
+.product_show_show {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product_show_show .product {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+
+    position: relative;
+    cursor: pointer;
+    
+    /* background-image: url("/img/hammer.png");
+    background-position: center;
+    background-position-y: 20%;
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-color: rgb(247, 247, 247); */
+
+    width: 15rem;
+    height: 17rem;
+    margin: 1rem;
+    border: rgb(131, 131, 131) 1px solid;
+    border-radius: 5px;
+}
+
+.product_show_show .product .img-container {
+    flex: 1 1;
+}
+
+.product_show_show .product .img-container img {
+    width: 90%;
+}
+
+.product_show_show .product .show_more {
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    background: var(--tri-colors);
+    color: #fff;
+    font-family: var(--headline-font);
+    font-size: 1.3rem;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+
+    transition: all 0.2s ease-in-out;
+}
+
+.product_show_show .product .show_more:hover {
+    letter-spacing: 0.3rem;
+    background: #96b7d4;
+}
+
+.product_show_show .some_info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+    position: absolute;
+    bottom: 5rem;
+    left: 0;
+    font-size: 0.9rem;
+}
+
+.product_show_show .some_info .a, .product_show_show .some_info .b {
+    background: var(--main-color);
+    padding: 0.25rem;
+    color: #fff;
+    font-family: var(--headline-font);
+}
+
+.product_show_show .some_info .b {
+    background: var(--secondary-color);
+    color: var(--text-color);
+}
 
 .temp {
     height: 20rem;

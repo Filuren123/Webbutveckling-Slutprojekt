@@ -4,7 +4,7 @@ const headerContent = `
     <nav class="naven">
         <div class="inner_nav">
             <div class="nav1">
-                <a href="#">SORTIMENT</a><a href="#">VARUHUSINFO</a>
+                <a href="/sortiment.html">SORTIMENT</a><a href="#">VARUHUSINFO</a>
             </div>
             <div class="search">
                 <input type="text" placeholder="Vad letar du efter?">
