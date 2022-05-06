@@ -1,4 +1,6 @@
 const theHeader = document.querySelector(".the_header");
+const theFooter = document.querySelector(".footern");
+
 const headerContent = `
     <h1><a href="/index.html">Byggnads Kompaniet</a></h1>
     <nav class="naven">
@@ -17,4 +19,49 @@ const headerContent = `
     </nav>
 `;
 
+const footerContent = `
+    <div class="inner_footer">
+        <div>
+            <h1>Om oss</h1>
+            <ul>
+                <li>Vilka är vi?</li>
+                <li>Vad står vi för?</li>
+                <li>Hur står vi upp?</li>
+                <li>Varför står vi?</li>
+                <li>Kalle? Anka?</li>
+            </ul>
+        </div>
+        <div>
+            <h1>Juridik</h1>
+            <ul>
+                <li>Vilka är vi?</li>
+                <li>Kalle? Anka?</li>
+            </ul>
+        </div>
+        <div>
+            <h1>Fler länkar</h1>
+            <ul>
+                <li>Vilka är vi?</li>
+                <li>Vad står vi för?</li>
+                <li>Hur står vi upp?</li>
+            </ul>
+        </div>
+        <div class="socials">
+            <h1>Sociala medier</h1>
+            <div>
+                <div class="img-container">
+                    <img src="/img/sociala-medier/Instagram-Icon.png" alt="Vår instagram">
+                </div>
+                <div class="img-container">
+                    <img src="/img/sociala-medier/facebook.png" alt="Vår facebook">
+                </div>
+                <div class="img-container">
+                    <img src="/img/sociala-medier/twitter.png" alt="Vår twitter">
+                </div>
+            </div>
+        </div>
+    </div>
+`;
+
 theHeader.innerHTML = headerContent;
+theFooter.innerHTML = footerContent;
