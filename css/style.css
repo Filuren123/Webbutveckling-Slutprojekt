@@ -75,6 +75,9 @@ button, input[type="submit"] {
     justify-content: space-between;
     align-items: center;
 
+    position: sticky;
+    top: 0;
+
     background: var(--main-color);
     z-index: 99;
     height: 5rem;
@@ -110,11 +113,84 @@ button, input[type="submit"] {
     outline: var(--secondary-color) 2px solid;
 }
 
-.inner_nav > .nav1 a, .inner_nav > .nav2 a{
+.inner_nav > .nav1 a, .inner_nav > .nav2 a {
     color: #fff;
     text-decoration: none;
     margin: 0 1rem;
     font-family: var(--headline-font);
+}
+
+.inner_nav .img-container {
+    display: none;
+    
+    width: 2.7rem;
+    margin-left: 1rem;
+}
+
+.inner_nav img {
+    filter: invert(1);
+}
+
+.inner_nav .hamburger_show {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    width: 2.8rem;
+    margin-left: 1rem;
+}
+
+.inner_nav .hamburger_show div {
+    width: inherit;
+    height: 0.45rem;
+    background: #fff;
+    margin: 0.25rem 0;
+    border-radius: 0.2rem;
+
+    transition: all 0.2s linear;
+}
+
+.dropdown {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 5rem;
+    
+    background: #fff;
+    height: 100vh;
+    width: 70vw;
+
+    box-shadow: 1px 0px 5px 0px #4b4b4b;
+
+    transform: translateX(-75vw);
+    transition: all 0.2s ease-in-out;
+}
+
+.dropdown a {
+    text-decoration: none;
+    padding: 1rem;
+    font-size: 1.4rem;
+}
+
+.dropdown_active {
+    transform: translateX(0);
+}
+
+.dropdown_active_burger {
+
+}
+
+.dropdown_active_burger > :nth-child(1) {
+    transform: translateY(15px) rotateZ(45deg);
+}
+
+.dropdown_active_burger > :nth-child(2) {
+    opacity: 0;
+}
+
+.dropdown_active_burger > :nth-child(3) {
+    transform: translateY(-15px) rotateZ(-45deg);
 }
 
 /* Introduktion */
@@ -130,7 +206,7 @@ button, input[type="submit"] {
     align-items: center;
     justify-content: center;
 
-    width: 40rem;
+    max-width: 40rem;
 }
 
 .introduction > * {
@@ -153,11 +229,6 @@ button, input[type="submit"] {
     padding: 1rem;
 }
 
-.welcome .info {
-    font-size: 1.6rem;
-    padding: 1rem;
-}
-
 .welcome h1 {
     font-size: 4rem;
     text-align: center;
@@ -166,6 +237,11 @@ button, input[type="submit"] {
 .welcome h1 > * {
     font-family: var(--headline-font);
     letter-spacing: 1rem;
+}
+
+.welcome .info {
+    font-size: 1.6rem;
+    padding: 1rem;
 }
 
 .introduction .signup {
@@ -199,13 +275,14 @@ button, input[type="submit"] {
     display: flex;
     flex-direction: column;
 
-    max-width: 70rem;
+    max-width: 90rem;
     margin: auto;
 }
 
 .start_main .offers_start {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .offers_start .offer {
@@ -215,7 +292,7 @@ button, input[type="submit"] {
     background: red;
     background-image: url("../img/placeholders/50mm_Whitewood.JPG");
     
-    margin: 0 1rem;
+    margin: 1rem 1rem;
     width: 25rem;
     height: 30rem;
     border-radius: 5px;
@@ -525,10 +602,6 @@ div.sec_pris {
     color: var(--text-color);
 }
 
-.temp {
-    height: 20rem;
-}
-
 /* Footer */
 .footern {
     display: flex;
@@ -537,7 +610,7 @@ div.sec_pris {
 
     background: var(--main-color);
     margin-top: 4rem;
-    height: 20rem;
+    min-height: 20rem;
 }
 
 .footern * {
@@ -585,4 +658,185 @@ div.sec_pris {
 
 .inner_footer .socials .img-container img {
     border-radius: 0.5rem;
+}
+
+
+/* Mobile */
+@media (max-width: 1330px) {
+    .introduction .welcome {
+
+    }
+    
+    .welcome .info {
+        text-align: center;
+    }
+    
+    .introduction .signup form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .introduction .signup input {
+        text-align: center;
+    }
+    
+    .introduction .signup input[type="submit"] {
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 1100px) {
+    .inner_nav {
+        justify-content: center;
+    }
+
+    .inner_nav > * {
+        margin: 0;
+        justify-content: flex-start;
+        width: auto;
+    }
+
+    .inner_nav > :last-child {
+        max-width: 100%;
+    }
+
+    .naven .search {
+        display: none;
+    }
+
+    .inner_nav .img-container {
+        display: block;
+    }
+
+    .introduction {
+        flex-direction: column;
+        align-items: center;
+        margin: 16rem 0;
+    }
+
+    .introduction > * {
+        width: 80%;
+    }
+
+    .introduction .welcome {
+        margin: 0;
+        margin-top: 2rem;
+    }
+
+    .footern * {
+        color: #fff;
+        font-family: var(--headline-font);
+        text-align: center;
+        transition: none;
+    }
+    
+    .inner_footer {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 3rem;
+    }
+    
+    .inner_footer ul {
+        list-style: none;
+        margin-bottom: 3rem;
+    }
+    
+    .inner_footer ul li {
+        padding: 0.6rem 0;
+    
+        transition: all 0.2s ease-in-out;
+    }
+    
+    .inner_footer ul li:hover {
+        cursor: pointer;
+        transform: translateX(0.5rem);
+    }
+    
+    .inner_footer .socials > :nth-child(2) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .inner_footer .socials .img-container {
+        background: #fff;
+        border-radius: 1rem;
+        width: 3rem;
+        margin: 1rem;
+        cursor: pointer;
+    }
+    
+    .inner_footer .socials .img-container img {
+        border-radius: 0.5rem;
+    }
+
+    /* Sortiment */
+    .sortiment {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    
+    .sortiment .quick_nav {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    
+    .product_show {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        
+        flex: 1 1;
+        margin: 1rem 0;
+    }
+}
+
+@media(max-width: 768px) {
+    .inner_nav > *:not(.inner_nav > .img-container, .inner_nav .hamburger_show) {
+        display: none;
+    }
+
+    .inner_nav .hamburger_show {
+        display: flex;
+    }
+
+    .inner_nav {
+        justify-content: space-between;
+    }
+
+    .inner_nav .img-container {
+        margin-right: 1.5rem;
+    }
+
+    .naven .dropdown {
+        display: flex;
+    }
+
+    .welcome h1 {
+        font-size: 9vw;
+    }
+    
+    .welcome h1 > * {
+        font-family: var(--headline-font);
+        letter-spacing: 0.6rem;
+    }
+    
+    .welcome .info {
+        font-size: 4.5vw;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .introduction .signup input {
+        font-size: 1rem;
+    }
+    
+    .introduction {
+        flex-direction: column;
+        align-items: center;
+        margin: 6rem 0;
+    }
 }
