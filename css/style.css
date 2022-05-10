@@ -54,6 +54,14 @@ button, input[type="submit"] {
     cursor: pointer;
 }
 
+.img-credits {
+    width: 8rem;
+    font-size: 0.6rem;
+    text-align: center;
+    background: rgb(247, 247, 247);
+    padding: 0.5rem;
+}
+
 /* Header */
 .the_header {
     display: flex;
@@ -129,6 +137,10 @@ button, input[type="submit"] {
 
 .inner_nav img {
     filter: invert(1);
+}
+
+.inner_nav a:hover {
+    text-decoration: underline;
 }
 
 .inner_nav .hamburger_show {
@@ -388,16 +400,40 @@ button, input[type="submit"] {
 }
 
 /* Varukorgen */
+.varukorgen_main_main {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+}
+
+.varukorgen_main_main .ad {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    
+    background: #000;
+    background-image: url("../img/byggare.jpg");
+    background-position: center;
+    object-fit: cover;
+
+    width: 18rem;
+    border-radius: 5px;
+    height: 45rem;
+    margin: 0 4rem;
+}
+
+.varukorgen_main_main .ad .img-credits {
+    border-radius: 0 1rem 0 0;
+}
 
 .varukorg_main {
     max-width: 60rem;
-    margin: auto;
-    margin-top: 3rem;
     border: rgb(110, 110, 110) 1px solid;
     border-radius: 5px;
 }
 
-.varukorg_main header h2 {
+.varukorg_main > header {
+    background: rgb(233, 233, 233);
     padding: 1rem;
 }
 
@@ -445,7 +481,6 @@ h3.sec_pris {
 div.sec_artikel {
     display: flex;
 
-    
     flex: 0 0 20rem;
     padding: 1rem;
 }
@@ -482,6 +517,32 @@ div.sec_lagerstatus {
 
 div.sec_pris {
     flex: 1 1 5rem;
+}
+
+.to_kassa {
+    width: 100%;
+    border-top: rgb(110, 110, 110) solid 1px;
+}
+
+.to_kassa button {
+    width: inherit;
+    border: none;
+    padding: 1rem;
+    font-size: 1.1rem;
+    font-family: var(--headline-font);
+    letter-spacing: 0.1rem;
+
+    transition: all 0.1s ease-in-out;
+}
+
+.to_kassa button:hover {
+    background: var(--main-color);
+    color: #fff;
+}
+
+.total_price_varu > :nth-child(2) {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
 }
 
 /* Sortiment */
@@ -737,6 +798,16 @@ div.sec_pris {
 }
 
 /* Mobile */
+@media (max-width: 1650px) {
+    .varukorgen_main_main {
+        justify-content: center;
+    }
+
+    .varukorgen_main_main .ad {
+        display: none;
+    }
+}
+
 @media (max-width: 1330px) {
     .introduction .welcome {
 
@@ -831,6 +902,68 @@ div.sec_pris {
     }
     
     .footern .top_footer > * {
+        margin-top: 2rem;
+    }
+}
+
+@media(max-width: 960px) {
+    .artiklar_varu .top_info {
+        display: none;
+    }
+
+    .varu_artikel {
+        flex-direction: column;
+        border-bottom: #4b4b4b dashed 1px;
+    }
+
+    .varu_artikel .sec_artikel {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .varu_artikel .sec_artikel .img-container {
+        max-width: 50rem;
+    }
+
+    .sec_styckpris::before {
+        content: "Styckpris";
+        display: block;
+        font-weight: bold;
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .sec_antal::before {
+        content: "Antal";
+        display: block;
+        font-weight: bold;
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .sec_lagerstatus::before {
+        content: "Lagerstatus";
+        display: block;
+        font-weight: bold;
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .sec_priset_pris::before {
+        content: "Totalt";
+        display: block;
+        font-weight: bold;
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .fake_varu_artikel > *:not(.total_price_varu) {
+        display: none;
+    }
+
+    .fake_varu_artikel {
+        border: none;
         margin-top: 2rem;
     }
 }
