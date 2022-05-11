@@ -189,10 +189,6 @@ button, input[type="submit"] {
     transform: translateX(0);
 }
 
-.dropdown_active_burger {
-
-}
-
 .dropdown_active_burger > :nth-child(1) {
     transform: translateY(15px) rotateZ(45deg);
 }
@@ -304,12 +300,20 @@ button, input[type="submit"] {
     align-items: flex-end;
     
     background: red;
-    background-image: url("../img/placeholders/50mm_Whitewood.JPG");
+    background-image: url("../img/wooden-planks.jpg");
+    background-size: cover;
     
+    position: relative;
     margin: 1rem 1rem;
     width: 25rem;
     height: 30rem;
     border-radius: 5px;
+}
+
+.offers_start .offer .img-credits {
+    position: absolute;
+    top: 0;
+    border-radius: 3px 0 1rem 0;
 }
 
 .offers_start .offer .promt {
@@ -321,6 +325,7 @@ button, input[type="submit"] {
     height: 7rem;
     background: rgba(51, 51, 51, 0.562);
     padding: 0 1rem;
+    border-radius: 0 0 5px 5px;
 }
 
 .offers_start .offer .name {
@@ -576,6 +581,7 @@ div.sec_pris {
     text-decoration: none;
     color: var(--text-color);
     padding: 0.6rem;
+    padding-left: 0.2rem;
     font-family: var(--headline-font);
 
     transition: all 0.1s ease-in-out;
@@ -590,10 +596,6 @@ div.sec_pris {
     text-decoration: underline;
 }
 
-.quick_nav .category a:hover::before {
-    margin-right: 1.2rem;
-}
-
 .quick_nav .sub_category a:first-child {
     padding-top: 0rem;
 }
@@ -603,15 +605,23 @@ div.sec_pris {
     transform: translateX(0.8rem);
 }
 
-.quick_nav .category a::before {
+.quick_nav .category .img-container {
+    display: inline-block;
+    margin-left: 0.5rem;
+}
+
+.quick_nav .category svg {
     content: url("/img/svg/arrow.svg");
     filter: invert(0%) sepia(0%) saturate(0%) brightness(0%) contrast(100%);
-    width: 0.5rem;
+    width: 0.6rem;
     display: inline-block;
-    margin-right: 0.5rem;
     vertical-align: middle;
 
     transition: all 0.1s ease-in-out;
+}
+
+.quick_nav .category .dropdown_arrow_active {
+    transform: rotateZ(90deg);
 }
 
 .quick_nav .sub_category {
@@ -619,7 +629,7 @@ div.sec_pris {
     flex-direction: column;
 
     margin-bottom: 0.4rem;
-    margin-left: 1.3rem;
+    margin-left: 1.8rem;
 }
 
 .sub_category_open {
@@ -808,11 +818,7 @@ div.sec_pris {
     }
 }
 
-@media (max-width: 1330px) {
-    .introduction .welcome {
-
-    }
-    
+@media (max-width: 1330px) {    
     .welcome .info {
         text-align: center;
     }
@@ -965,6 +971,10 @@ div.sec_pris {
     .fake_varu_artikel {
         border: none;
         margin-top: 2rem;
+    }
+
+    .securities {
+        width: 90%;
     }
 }
 
