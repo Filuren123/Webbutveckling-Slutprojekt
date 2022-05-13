@@ -113,6 +113,7 @@ button, input[type="submit"] {
     width: 100%;
     font-size: 1.2rem;
     padding: 0.4rem;
+    padding-left: 0.9rem;
     border-radius: 5px;
     border: none;
 }
@@ -408,6 +409,7 @@ button, input[type="submit"] {
 .varukorgen_main_main {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
     margin-top: 3rem;
 }
 
@@ -724,6 +726,9 @@ div.sec_pris {
     background: var(--secondary-color);
     color: var(--text-color);
 }
+
+/* About */
+
 
 /* Footer */
 .footern {
