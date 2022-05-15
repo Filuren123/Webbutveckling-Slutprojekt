@@ -14,7 +14,7 @@ const navContent = `
             <div></div>
         </div>
         <div class="nav1">
-            <a href="/sortiment.html">SORTIMENT</a><a href="/about.html">Om Oss</a>
+            <a href="/sortiment.html">SORTIMENT</a><a href="/about.html">OM OSS</a>
         </div>
         <div class="search">
             <input type="text" placeholder="Vad letar du efter?">
@@ -29,7 +29,7 @@ const navContent = `
     </div>
     <div class="dropdown">
         <a href="/sortiment.html">SORTIMENT</a>
-        <a href="/about.html">Om Oss</a>
+        <a href="/about.html">OM OSS</a>
         <a href="#">MITT KONTO</a>
         <a href="/varukorg.html">VARUKORG</a>
     </div>
@@ -63,7 +63,7 @@ const footerContent = `
             </div>
             <div class="mini_nav">
                 <a href="/sortiment.html">SORTIMENT</a>
-                <a href="/about.html">Om Oss</a>
+                <a href="/about.html">OM OSS</a>
                 <a href="#">MITT KONTO</a>
                 <a href="/varukorg.html">VARUKORG</a>
             </div>
@@ -76,21 +76,9 @@ const footerContent = `
                     <p>
                         Här finns lite mer
                     </p>
-                    <p>
-                        Här finns lite mer
-                    </p>
                 </div>
                 <div>
                     <h3>Annan info</h3>
-                    <p>
-                        Somehting
-                    </p>
-                    <p>
-                        Här finns lite mer
-                    </p>
-                    <p>
-                        Här finns lite mer
-                    </p>
                     <p>
                         Somehting
                     </p>

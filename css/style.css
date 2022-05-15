@@ -570,6 +570,9 @@ div.sec_pris {
 
 .sortiment .quick_nav {
     width: 13rem;
+}
+
+.sortiment .quick_nav > div {
     border: #cecece solid 1px;
 }
 
@@ -640,6 +643,10 @@ div.sec_pris {
 
 .sub_category_open {
     display: flex !important;
+}
+
+.quick_nav .ad {
+    margin-top: 2rem;
 }
 
 .product_show {
@@ -851,6 +858,10 @@ div.sec_pris {
     text-decoration: underline;
 }
 
+.footern .info_falt > div {
+    margin-bottom: 2rem;
+}
+
 .footern .follow h3 {
     margin-bottom: 0.6rem;
 }
@@ -970,6 +981,10 @@ div.sec_pris {
         
         flex: 1 1;
         margin: 1rem 0;
+    }
+
+    .sortiment .quick_nav .ad {
+        display: none;
     }
 
     
